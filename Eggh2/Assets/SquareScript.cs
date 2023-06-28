@@ -9,7 +9,7 @@ public class SquareScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
 
     }
 
@@ -17,8 +17,8 @@ public class SquareScript : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) == true)
-        {
-            myRigidbody.velocity = Vector2.up * 20;
-        }
+
+
+        myRigidbody.velocity = Vector2.up * 6;
     }
 }
