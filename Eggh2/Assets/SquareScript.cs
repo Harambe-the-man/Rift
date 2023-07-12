@@ -1,13 +1,15 @@
     using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SquareScript : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 8f;
-    private float jumpingPower = 16f;
+    public float speed = 8f;
+    public float jumpingPower = 16f;
     public Rigidbody2D myRigidbody;
+    public float bottomBound;
 
 
     [SerializeField] private Rigidbody2D rb;
@@ -26,6 +28,10 @@ public class SquareScript : MonoBehaviour
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+        if (transform.position.y < -bottomBound)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene() GetActiv);
         }
     }
 
