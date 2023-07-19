@@ -31,8 +31,9 @@ public class SquareScript : MonoBehaviour
         }
         if (transform.position.y < -bottomBound)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene() GetActiv);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
     }
 
     private void FixedUpdate()
